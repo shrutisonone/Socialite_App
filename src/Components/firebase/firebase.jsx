@@ -1,18 +1,24 @@
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+ // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
-const firebaseConfig = {
-  apiKey: "AIzaSyCw-OOkR7wruJik6wgQVFdgpQEqhIy6O0c",
-  authDomain: "social-media-app-f9911.firebaseapp.com",
-  projectId: "social-media-app-f9911",
-  storageBucket: "social-media-app-f9911.appspot.com",
-  messagingSenderId: "817710885780",
-  appId: "1:817710885780:web:7f9275bbcadb854268bd81",
-};
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDSvy7e-boGcYM0YJ3gUdZT7n-MVqx-Sqg",
+    authDomain: "socialite-29673.firebaseapp.com",
+    projectId: "socialite-29673",
+    storageBucket: "socialite-29673.firebasestorage.app",
+    messagingSenderId: "242738334097",
+    appId: "1:242738334097:web:654dea8e1db7baa4f4f230",
+    measurementId: "G-92FBEXNXSL"
+  };
 
-const app = initializeApp(firebaseConfig);
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
 const auth = getAuth(app);
 const db = getFirestore(app);
-
-export { auth, db, onAuthStateChanged };
